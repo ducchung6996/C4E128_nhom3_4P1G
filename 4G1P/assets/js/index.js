@@ -4,8 +4,8 @@ owl.owlCarousel({
     center:true,
     nav:false,
     dots:false,
-    margin:10,
-    autoplay:true,
+    margin:100,
+    autoplay:false,
     autoplayTimeout:3000,
     autoplayHoverPause:true,
     responsive:{
@@ -13,21 +13,10 @@ owl.owlCarousel({
             items:1
         },
         600:{
-            items:3
+            items:2
         },            
-        960:{
-            items:5
-        },
-        1200:{
-            items:6
+        1000:{
+            items:3
         }
     }
-});
-owl.on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY>0) {
-        owl.trigger('next.owl');
-    } else {
-        owl.trigger('prev.owl');
-    }
-    e.preventDefault();
 });
