@@ -5,7 +5,7 @@ owl.owlCarousel({
     nav:false,
     dots:false,
     margin:100,
-    autoplay:false,
+    autoplay:true,
     autoplayTimeout:3000,
     autoplayHoverPause:true,
     responsive:{
@@ -23,18 +23,38 @@ owl.owlCarousel({
 
 
 const loginBtn = document.getElementById("login-form")
-const header = document.getElementsByTagName("header")
+const signUpBtn = document.getElementById("signup-form")
+const loginInfo = document.getElementsByClassName("login-input")
 
 function openLoginForm() {
-    loginBtn.style.display = 'flex';
+    loginBtn.style.transform = "scale(1)";
+    loginBtn.style.visibility = "1";
+    loginBtn.style.opacity = "1";
+}
+
+function openSignUpForm() {
+    signUpBtn.style.transform = "scale(1)";
+    signUpBtn.style.visibility = "1";
+    signUpBtn.style.opacity = "1";
 }
 
 function closeLoginForm() {
-    loginBtn.style.display = 'none';
+    loginBtn.style.transform = "scale(0)";
+    loginBtn.style.visibility = "0";
+    loginBtn.style.opacity = "0";
+
+}
+
+function closeSignUpForm() {
+    signUpBtn.style.transform = "scale(0)";
+    signUpBtn.style.visibility = "0";
+    signUpBtn.style.opacity = "0";
 }
 
 window.onclick = function(event) {
-    if (event.target == loginBtn) {
-        loginBtn.style.display = "none";
+    if (event.target == loginBtn || event.target == signUpBtn) {
+        closeLoginForm();
+        closeSignUpForm();
     }
 }
+
