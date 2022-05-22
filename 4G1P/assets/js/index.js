@@ -20,3 +20,21 @@ owl.owlCarousel({
         }
     }
 });
+
+
+const loginBtn = document.getElementById("login-form")
+const header = document.getElementsByTagName("header")
+
+function openLoginForm() {
+    loginBtn.style.display = 'flex';
+}
+
+function closeLoginForm() {
+    loginBtn.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == loginBtn) {
+        loginBtn.style.display = "none";
+    }
+}

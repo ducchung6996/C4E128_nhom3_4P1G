@@ -11,23 +11,56 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- header start -->
     <header>
         <nav>
             <div class="logo">
                 <a href="#">4P1G</a>
                 <form>
-                    <input type="text" placeholder="Search.." name="search">
+                    <input type="text" placeholder="Tìm kiếm" name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
             
             <div class="login">
-                <button><i class="fa-solid fa-user"></i> Login</button> 
-                <p>Or</p>
-                <button><i class="fa-solid fa-key"></i> Signup</button>
+                <button id="login-btn" onclick="openLoginForm()"><i class="fa-solid fa-user"></i> Đăng nhập</button>
+                <p>hoặc</p>
+                <button id="singin-btn"><i class="fa-solid fa-key"></i> Đăng ký</button>
             </div>
         </nav>
     </header>
+    <!-- header end -->
+
+    <!-- login form start -->
+    <div id="login-form">
+        <form action="action_page.php" method="post">
+            <div class="img-container">
+                <span onclick="closeLoginForm()" class="close"><i class="fa-solid fa-xmark"></i></span>
+                <img src="assets/image/user.png" alt="Avatar" class="user-avatar">
+            </div>
+          
+            <div class="login-form-container">
+                <label for="uname"><b>Tên người dùng</b></label>
+                <input class="login-input" type="text" placeholder="Điền tên đăng nhập" name="uname" required>
+                    
+                <label for="psw"><b>Mật khẩu</b></label>
+                <input class="login-input" type="password" placeholder="Nhập mật khẩu" name="psw" required>
+            
+                <button class="login-btn" type="submit">Đăng nhập</button>
+                <div class="remember">
+                    <input type="checkbox" checked="checked"><p> Giữ tôi đăng nhập</p>
+                </div>
+            </div>
+          
+            <div class="other-container" style="background-color:#f1f1f1">
+                <button onclick="closeLoginForm()" class="cancelbtn">Cancel</button>
+                <a href="#">Bạn quên mật khẩu?</a>
+            </div>
+        </form>
+    </div>
+    <!-- login form end -->
+
+    <!-- slider content start -->
     <section class="slider-content">
         <div class="owl-carousel owl-theme">
             <div class="item">
@@ -441,6 +474,7 @@
 
         </div>
     </section>
+    <!-- slider content end -->
 </body>
 <script src="assets/lib/jquery/jquery.min.js"></script>
 <script src="assets/lib/owl_carousel/owl.carousel.min.js"></script>
