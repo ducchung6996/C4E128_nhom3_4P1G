@@ -3,9 +3,8 @@ owl.owlCarousel({
     loop:true,
     nav:false,
     dots:false,
-    margin:25,
-    autoplay:false,
-    autoplayTimeout:3000,
+    autoplay:true,
+    autoplayTimeout:4000,
     autoplayHoverPause:true,
     responsive:{
         0:{
