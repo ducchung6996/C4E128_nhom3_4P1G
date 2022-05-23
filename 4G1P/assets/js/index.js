@@ -4,18 +4,18 @@ owl.owlCarousel({
     center:true,
     nav:false,
     dots:false,
-    margin:100,
-    autoplay:true,
+    margin:25,
+    autoplay:false,
     autoplayTimeout:3000,
     autoplayHoverPause:true,
     responsive:{
         0:{
             items:1
         },
-        600:{
+        1200:{
             items:2
         },            
-        1000:{
+        1800:{
             items:3
         }
     }
