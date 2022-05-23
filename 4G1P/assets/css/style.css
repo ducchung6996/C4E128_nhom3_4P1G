@@ -371,18 +371,8 @@ nav {
 }
 
 /* slider content */
-.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item-box {
-    width: fit-content;
-    height: 460px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.owl-item {
+    padding: 70px 0 30px 0;
 }
 
 .item {
