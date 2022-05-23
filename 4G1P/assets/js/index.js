@@ -3,7 +3,9 @@ owl.owlCarousel({
     loop:true,
     nav:false,
     dots:true,
-    autoplay:true,
+    autoplay:false,
+    center:true,
+    margin:0,
     autoplayTimeout:4000,
     autoplayHoverPause:true,
     responsive:{
@@ -18,7 +20,6 @@ owl.owlCarousel({
         }
     }
 });
-
 
 const loginBtn = document.getElementById("login-form")
 const signUpBtn = document.getElementById("signup-form")
