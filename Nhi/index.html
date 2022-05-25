@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/ecd596d40f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="search-bar">
+        <form class = "search-box-container">
+            <input placeholder="Tìm truyện" class="search-box">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+    </div>
+
+    <div id="main">
+        <!-- Header Start -->
+        <div id="header">
+            <div id="logo">
+                <a href="#">
+                <img src="assets/Img/open-book.png">
+                <div class = "group-name"><b>4P1G</b></div>
+                </a>
+            
+            </div>
+            <div id="login">
+                <button class="login-btn" onclick="openLoginForm()"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</button>
+                <button class="signin-btn" onclick="openSignupForm()"><i class="fa-solid fa-key"></i>Đăng kí</button>
+            </div>
+        </div>
+
+        <div class="form-container" id="contain-form">
+            <div class="form-box" id = "showform">
+                <div class="buttion-box">
+                    <div id="btn"></div>
+                    <button class = "lgn-btn" onclick="loginform1()">Đăng Nhập</button>
+                    <button class = "lgn-btn" onclick="register()">Đăng Kí</button>
+                </div>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"><a href = "#"></a></i>
+                    <i class="fa-brands fa-instagram"><a href = "#"></a></i>
+                    <i class="fa-brands fa-google"><a href = "#"></a></i>
+                </div>
+                <form class="input-form" id="loginform1">
+                    <input type ="email" class ="input-id" placeholder = "Nhập Email" required>
+                    <input type ="password" class ="input-id" placeholder = "Nhập mật khẩu" required>
+                    <input type="checkbox" class="check-box"><span class = "checkbox-text">Nhớ tài khoản của tôi</span><br>
+                    <button class ="submit-btn">Đăng nhập</button>
+                    <span><a href="#" class="forget-pass">Quên mật khẩu</a></span>
+                    <span class="pass-forget">Chưa có tài khoản? <a href="#">Đăng kí</a></span>
+                </form>
+                <form class="input-form" id="register">
+                    <input type ="email" class ="input-id" placeholder = "Nhập Email" required>
+                    <input type ="password" class ="input-id" placeholder = "Nhập mật khẩu" required>
+                    <input type ="password" class ="input-id" placeholder = "Xác nhận mật khẩu" required>
+                    <input type="checkbox" class="check-box"><span class = "checkbox-text">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> & <a href="#">Chính sách bảo mật</a> </span>
+                    <button class ="submit-btn">Đăng kí</button>
+                </form>
+            </div>
+        </div>
+        <div class="main-content">
+
+        </div>
+
+        <!-- <footer>
+            <div id="footer">
+            <div>
+                <img src="assets/Img/Logo.png">
+            </div>
+            
+            </div>
+            <div style="margin-left: 75px; color:rgb(131, 18, 126);"> Copyright © 2022 4G1P</div>
+
+        </footer> -->
+    </div>
+
+    <script src="main.js">
+    </script>
+
+
+
+</body>
+</html>
