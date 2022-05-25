@@ -52,9 +52,20 @@ function closeSignUpForm() {
 }
 
 window.onclick = function(event) {
-    if (event.target == loginBtn || event.target == signUpBtn) {
+    if (event.target == loginBtn) {
         closeLoginForm();
         closeSignUpForm();
     }
 }
 
+function login(event) {
+    event.preventDefault();
+    const {uname, psw} = event.target.elements;
+    console.log(uname.value);
+    console.log(psw.value);
+    closeLoginForm();
+    alert("Wellcome " + uname.value)
+}
+
+const loginForm = document.getElementById("flg");
+loginForm.addEventListener('submit', login);
