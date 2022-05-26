@@ -20,7 +20,7 @@ a {
   display: flex;
 }
 .slide_bar {
-  width: 20%;
+  width: 30%;
   height: 1000px;
   background-color: aqua;
 }
