@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+#header {
+  height: 50px;
+  background-color: blue;
+}
+.slide {
+  height: 200px;
+  background-color: greenyellow;
+}
+.container {
+  display: flex;
+}
+.slide_bar {
+  width: 20%;
+  height: 1000px;
+  background-color: aqua;
+}
+.main-content {
+  width: 70%;
+  height: 1000px;
+  background-color: #f9f9f9;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.nav-comic-type {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  background-color: #e4e4e4;
+}
+
+.nav-comic-type>button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transform: 0.4s;
+  width: 230px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+.nav-comic-type>button:hover {
+  background-color: #f9f9f9;
+}
+
+.wrapper_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: fit-content;
+}
+
+.img_comic > img {
+  margin-top: 10px;
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+}
+.img_comic {
+  position: relative;
+  text-align: center;
+}
+.img_comic:hover .summary {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img_comic .rate > span {
+  color: #e4e4e4;
+  line-height: 30px;
+  padding: 0px 5px;
+}
+.summary {
+  background-color: #f9f9f9;
+  color: #333;
+  width: 270px;
+  height: fit-content;
+  position: absolute;
+  top: 10px;
+  right: -190px;
+  z-index: 1;
+  padding: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+.summary > p {
+  text-align: left;
+}
+.summary > img {
+  width: 100px;
+  height: auto;
+  margin: auto;
+}
+.summary-left{
+  background-color: #f9f9f9;
+  color: #333;
+  width: 200px;
+  height: fit-content;
+  position: absolute;
+  top: 10px;
+  right: 200px;
+  z-index: 1;
+  padding: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+.rate {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  width: 200px;
+  position: relative;
+  bottom: 34px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: rotateY(180deg);
+}
+.rate input {
+  display: none;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+  color: #f9f9f9;
+}
+.rate > input:checked ~ label {
+  color: #f9f9f9;
+}
+.rate label {
+  font-size: 25px;
+  transition: all 0.2 ease;
+  line-height: 30px;
+}
+section {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.name_comic {
+  margin: 5px 0px 5px;
+}
+.new_chap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.new_chap_link:hover {
+  text-decoration: underline;
+}
+
+.new_chap > span {
+  display: block;
+  margin-bottom: 5px;
+}
+.hour {
+  color: #333;
+  margin-left: 24px;
+}
+#codai{
+  visibility: hidden;
+  opacity: 0;
+  top: 50px;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  background-color:coral;
+  transition: 0.5s;
+}
+
+#manhua{
+  visibility: hidden;
+  opacity: 0;
+  top: 50px;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  background-color:rgb(255, 208, 80);
+  transition: 0.5s;
+}
+
+#ngontinh{
+  visibility: hidden;
+  opacity: 0;
+  top: 50px;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  background-color:rgb(100, 255, 80);
+  transition: 0.5s;
+}
+
+#thieunhi{
+  visibility: hidden;
+  opacity: 0;
+  top: 50px;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  background-color:rgb(80, 156, 255);
+  transition: 0.5s;
+}
+
+#dammy{
+  visibility: hidden;
+  opacity: 0;
+  top: 50px;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  background-color:rgb(255, 80, 232);
+  transition: 0.5s;
+}
+
+#default-btn {
+  background-color: #f9f9f9;
+}
+
+#all-type {
+  transition: 0.5s;
+  visibility: visible;
+  opacity: 1;
+}
+
