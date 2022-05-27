@@ -12,7 +12,7 @@ let ngontinhBtn = document.getElementById("ngontinh-btn");
 let thieunhiBtn = document.getElementById("thieunhi-btn");
 let dammyBtn = document.getElementById("dammy-btn");
 
-function hidePage () {
+function hidePage() {
   allType.style.visibility = "hidden";
   allType.style.opacity = "0";
   coDai.style.visibility = "hidden";
@@ -33,42 +33,42 @@ function hidePage () {
   dammyBtn.style.backgroundColor = "#e4e4e4";
 }
 
-function showPageDefault () {
+function showPageDefault() {
   hidePage();
   allType.style.visibility = "visible";
   allType.style.opacity = "1";
   defaultBtn.style.backgroundColor = "#f9f9f9";
 }
 
-function showPageCoDai () {
+function showPageCoDai() {
   hidePage();
   coDai.style.visibility = "visible";
   coDai.style.opacity = "1";
   codaiBtn.style.backgroundColor = "coral";
 }
 
-function showPageManHua () {
+function showPageManHua() {
   hidePage();
   manHua.style.visibility = "visible";
   manHua.style.opacity = "1";
   manhuaBtn.style.backgroundColor = "rgb(255, 208, 80)";
 }
 
-function showPageNgonTinh () {
+function showPageNgonTinh() {
   hidePage();
   ngonTinh.style.visibility = "visible";
   ngonTinh.style.opacity = "1";
   ngontinhBtn.style.backgroundColor = "rgb(100, 255, 80)";
 }
 
-function showPageThieuNhi () {
+function showPageThieuNhi() {
   hidePage();
   thieuNhi.style.visibility = "visible";
   thieuNhi.style.opacity = "1";
   thieunhiBtn.style.backgroundColor = "rgb(80, 156, 255)";
 }
 
-function showPageDamMy () {
+function showPageDamMy() {
   hidePage();
   damMy.style.visibility = "visible";
   damMy.style.opacity = "1";
