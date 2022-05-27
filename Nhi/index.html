@@ -9,16 +9,18 @@
     <script src="https://kit.fontawesome.com/ecd596d40f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Header Start -->
+         <!-- Searbox start  -->
     <div class="search-bar">
         <form class = "search-box-container">
-            <input placeholder="Tìm truyện" class="search-box">
             <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input placeholder="Tìm truyện" class="search-box">
         </form>
+          <!-- Searbox End  -->
 
     </div>
 
     <div id="main">
-        <!-- Header Start -->
         <div id="header">
             <div id="logo">
                 <a href="#">
@@ -32,9 +34,13 @@
                 <button class="signin-btn" onclick="openSignupForm()"><i class="fa-solid fa-key"></i>Đăng kí</button>
             </div>
         </div>
+        <!-- Header End -->
 
+
+        <!-- Login/signup Form Start -->
         <div class="form-container" id="contain-form">
             <div class="form-box" id = "showform">
+                <i class="fa-solid fa-xmark" onclick="closeLoginForm()"></i>
                 <div class="buttion-box">
                     <div id="btn"></div>
                     <button class = "lgn-btn" onclick="loginform1()">Đăng Nhập</button>
@@ -51,35 +57,66 @@
                     <input type="checkbox" class="check-box"><span class = "checkbox-text">Nhớ tài khoản của tôi</span><br>
                     <button class ="submit-btn">Đăng nhập</button>
                     <span><a href="#" class="forget-pass">Quên mật khẩu</a></span>
-                    <span class="pass-forget">Chưa có tài khoản? <a href="#">Đăng kí</a></span>
+                    <span class="pass-forget">Chưa có tài khoản? <a href="#" onclick="openSignupForm()">Đăng kí</a></span>
                 </form>
                 <form class="input-form" id="register">
                     <input type ="email" class ="input-id" placeholder = "Nhập Email" required>
                     <input type ="password" class ="input-id" placeholder = "Nhập mật khẩu" required>
                     <input type ="password" class ="input-id" placeholder = "Xác nhận mật khẩu" required>
-                    <input type="checkbox" class="check-box"><span class = "checkbox-text">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> & <a href="#">Chính sách bảo mật</a> </span>
+                    <input type="checkbox" class="check-box" required><span class = "checkbox-text">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> & <a href="#">Chính sách bảo mật</a> </span>
                     <button class ="submit-btn">Đăng kí</button>
                 </form>
             </div>
         </div>
+        <!-- Login/signup Form End -->
+
+        <!-- Main Content Start -->
         <div class="main-content">
 
         </div>
+        <!-- Main Content Start -->
 
-        <!-- <footer>
-            <div id="footer">
-            <div>
-                <img src="assets/Img/Logo.png">
-            </div>
-            
-            </div>
-            <div style="margin-left: 75px; color:rgb(131, 18, 126);"> Copyright © 2022 4G1P</div>
 
-        </footer> -->
+        <!-- Footer Start  -->
+    <footer>
+        <div class="footer-container">
+            <div class="left-footer">
+                <div>
+                    <img src="assets/Img/Logo1.png">
+                </div>
+                <div style="margin-left: 200px; color:black;"> Copyright © 2022 4G1P</div>
+            </div>
+
+            <div class="right-footer">
+                <div class="keywords-title"><b> Từ khoá </b></div>
+                <div id = "keywords">
+                    <button>Truyện tranh</button>
+                    <button>Truyện tranh online</button>
+                    <button>4P1G</button>
+                    <button>Truyện cổ đại</button>
+                    <button>Manhua</button>
+                    <button>Truyện ngôn tình</button>
+                    <button>Truyện thiếu nhi</button>
+                    <button>Chuyển sinh</button>
+                    <button>Truyện trending</button>
+                    <button>Blog Truyện</button>
+                    <button>Đọc truyện hay</button>
+                    <button>Truyện dài tập</button>
+                    <button>Web đọc truyện</button>
+                    <button>Đọc truyện online</button>
+                    <button>Manga online</button>
+                    <button>Đọc truyện manga</button>
+                    <button>Truyện siêu hay</button>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+        <!-- Footer End  -->
     </div>
 
-    <script src="main.js">
-    </script>
+    <script src="main.js"></script>
 
 
 
