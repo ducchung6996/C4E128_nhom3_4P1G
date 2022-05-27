@@ -17,12 +17,12 @@
     <div class="slide_bar">slide bar</div>
     <div class="main-content">
       <div class="nav-comic-type">
-        <button id="default-btn" onclick="showPageDefault()" class="nav_content_link ex_active">Tất Cả</button>
-        <button id="codai-btn" onclick="showPageCoDai()" class="nav_content_link">Cổ Đại</button>
-        <button id="manhua-btn" onclick="showPageManHua()" class="nav_content_link">Manhua</button>
-        <button id="ngontinh-btn" onclick="showPageNgonTinh()" class="nav_content_link">Ngôn Tình</button>
-        <button id="thieunhi-btn" onclick="showPageThieuNhi()" class="nav_content_link">Thiếu Nhi</button>
-        <button id="dammy-btn" onclick="showPageDamMy()" class="nav_content_link">Đam mỹ</button>
+        <button id="default-btn" onclick="showPage('all-type',event, '#f9f9f9')" class="nav_content_link ex_active">Tất Cả</button>
+        <button id="codai-btn" onclick="showPage('codai',event, 'coral')" class="nav_content_link">Cổ Đại</button>
+        <button id="manhua-btn" onclick="showPage('manhua',event, 'rgb(255, 208, 80)')" class="nav_content_link">Manhua</button>
+        <button id="ngontinh-btn" onclick="showPage('ngontinh',event, 'rgb(100, 255, 80)')" class="nav_content_link">Ngôn Tình</button>
+        <button id="thieunhi-btn" onclick="showPage('thieunhi',event, 'rgb(80, 156, 255)')" class="nav_content_link">Thiếu Nhi</button>
+        <button id="dammy-btn" onclick="showPage('dammy',event, 'rgb(255, 80, 232)')" class="nav_content_link">Đam mỹ</button>
       </div>
       <div class="wrapper_content comic-type" id="all-type">
         <section>
