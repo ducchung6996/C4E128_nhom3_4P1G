@@ -71,6 +71,7 @@ header {
     border-radius: 50%;
     background-color: rgb(223, 166, 104);
     height: 30px;
+    width: 30px;
     border: none;
     cursor: pointer;
     margin-left: 10px;
@@ -285,7 +286,7 @@ header {
 /* slider content */
 
 .slider-content {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .owl-item {
@@ -402,7 +403,7 @@ header {
     font-size: 16px;
 }
 
-.comic-type a {
+.comic-type p>a {
     color: #2980b9;
 }
 
@@ -438,7 +439,6 @@ header {
 }
 
 /* main content start */
-
 div h3 {
     text-transform: uppercase;
 }
@@ -446,56 +446,16 @@ div h3 {
 .container {
     width: 100%;
     display: flex;
-}
-
-.slide_bar {
-    width: 30%;
-    height: fit-content;
-    background-color: aqua;
-    margin-right: 10px;
-}
-
-.btn_list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn {
-    background: none;
-    width: 33.33%;
-    border: none;
-    height: 50px;
-    background-color: #e4e4e4;
-}
-
-.ex_active:active {
-    background-color: #f9f9f9;
-}
-
-.list {
-    justify-content: space-around;
-    display: flex;
-}
-
-.number {
-    font-size: 50px;
-    line-height: 100px;
-}
-
-.number1 {
-    color: blue;
-}
-
-h2 {
-    margin-bottom: 40px;
+    gap: 32px;
+    padding: 16px;
 }
 
 .main-content {
     height: fit-content;
-    background-color: #f9f9f9;
     position: relative;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 0px 8px 8px rgba(185, 185, 185, 0.75);
 }
 
 .nav-comic-type {
@@ -733,7 +693,61 @@ input:not(:checked)~label:hover~label {
     transition: 0.5s;
     visibility: visible;
     opacity: 1;
+    background-color: #f9f9f9;
 }
+
+/* side-bar start */
+.slide_bar {
+    width: auto;
+    height: 1044px;
+    background-color: aqua;
+    box-shadow: 0px 0px 8px 8px rgba(185, 185, 185, 0.75);
+}
+
+.btn_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background: none;
+    width: 33.33%;
+    border: none;
+    height: 50px;
+    background-color: #e4e4e4;
+}
+
+.ex_active:active {
+    background-color: #f9f9f9;
+}
+
+.list {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.number {
+    text-align: center;
+    width: 16%;
+    font-size: 50px;
+    line-height: 100px;
+}
+
+.side-bar-img {
+    width: auto;
+    height: 100px;
+}
+
+.number1 {
+    color: blue;
+}
+
+h2 {
+    margin-bottom: 20px;
+
+}
+
 
 /* footer start */
 footer {
