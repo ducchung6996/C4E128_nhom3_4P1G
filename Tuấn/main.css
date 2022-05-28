@@ -137,6 +137,7 @@ div h3{
   transition: 0.5s;
   border-radius: 6px;
   box-shadow: 0px 0px 4px 4px rgba(122, 122, 122, 0.75);
+  pointer-events: none;
 }
 .summary > p {
   text-align: left;
