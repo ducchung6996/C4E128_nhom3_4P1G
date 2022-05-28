@@ -212,6 +212,10 @@ section {
   text-decoration: underline;
 }
 
+.new_chap_link {
+  text-transform: capitalize;
+}
+
 .new_chap > span {
   display: block;
   margin-bottom: 5px;
