@@ -14,12 +14,6 @@ function loginform1(){
     z.style.left = "0px";
 }
 
-var a = document.getElementsByClassName("login-btn")
-var b = document.getElementById("contain-form")
-function showform(){
-    b.style.display = "block"
-}
-
 const loginForm = document.getElementById("contain-form")
 const loginBox = document.getElementById("showform")
 
