@@ -10,10 +10,10 @@ function hidePage() {
   }
 }
 
-function showPage(page, event, color) {
+function showPage(page, event) {
   hidePage();
   let pageComic = document.getElementById(page);
   pageComic.style.visibility = "visible";
   pageComic.style.opacity = "1";
-  event.target.style.backgroundColor = color;
+  event.target.style.backgroundColor = "#f9f9f9";
 }

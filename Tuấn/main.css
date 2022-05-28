@@ -24,7 +24,7 @@ div h3{
 }
 .slide_bar {
   width: 30%;
-  height: 1000px;
+  height: fit-content;
   background-color: aqua;
   margin-right: 10px;
 }
@@ -62,7 +62,7 @@ div h3{
  }
 .main-content {
   width: 70%;
-  height: 1000px;
+  height: fit-content;
   background-color: #f9f9f9;
   position: relative;
   display: flex;
@@ -118,6 +118,11 @@ div h3{
   padding: 0px 5px;
 }
 .summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   background-color: #f9f9f9;
   color: #333;
   width: 270px;
@@ -129,7 +134,9 @@ div h3{
   padding: 5px;
   visibility: hidden;
   opacity: 0;
-  transition: 0.4s;
+  transition: 0.5s;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px 4px rgba(122, 122, 122, 0.75);
 }
 .summary > p {
   text-align: left;
@@ -138,20 +145,11 @@ div h3{
   width: 100px;
   height: auto;
   margin: auto;
+  border: solid 1px #707070;
 }
 .summary-left{
-  background-color: #f9f9f9;
-  color: #333;
   width: 200px;
-  height: fit-content;
-  position: absolute;
-  top: 10px;
   right: 200px;
-  z-index: 1;
-  padding: 5px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.4s;
 }
 .rate {
   display: flex;
@@ -187,10 +185,18 @@ section {
   align-items: center;
 }
 .name_comic {
-  margin: 5px 0px 5px;
+  text-overflow: ellipsis;
+  height: 44px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 .new_chap {
+  padding: 0 10px;
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr 1fr;
 }
 .new_chap_link:hover {
@@ -202,8 +208,8 @@ section {
   margin-bottom: 5px;
 }
 .hour {
+  text-align: right;
   color: #333;
-  margin-left: 24px;
 }
 #codai{
   visibility: hidden;
@@ -212,7 +218,7 @@ section {
   position: absolute;
   width: 100%;
   height: fit-content;
-  background-color:coral;
+  background-color:#f9f9f9;
   transition: 0.5s;
 }
 
@@ -223,7 +229,7 @@ section {
   position: absolute;
   width: 100%;
   height: fit-content;
-  background-color:rgb(255, 208, 80);
+  background-color:#f9f9f9;
   transition: 0.5s;
 }
 
@@ -234,7 +240,7 @@ section {
   position: absolute;
   width: 100%;
   height: fit-content;
-  background-color:rgb(100, 255, 80);
+  background-color:#f9f9f9;
   transition: 0.5s;
 }
 
@@ -245,7 +251,7 @@ section {
   position: absolute;
   width: 100%;
   height: fit-content;
-  background-color:rgb(80, 156, 255);
+  background-color:#f9f9f9;
   transition: 0.5s;
 }
 
@@ -256,7 +262,7 @@ section {
   position: absolute;
   width: 100%;
   height: fit-content;
-  background-color:rgb(255, 80, 232);
+  background-color:#f9f9f9;
   transition: 0.5s;
 }
 
