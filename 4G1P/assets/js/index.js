@@ -22,50 +22,67 @@ owl.owlCarousel({
     }
 });
 
-const loginBtn = document.getElementById("login-form")
-const signUpBtn = document.getElementById("signup-form")
-const loginInfo = document.getElementsByClassName("login-input")
+var x = document.getElementById("loginform1");
+var y = document.getElementById("register");
+var z = document.getElementById("btn");
 
-function openLoginForm() {
-    loginBtn.style.transform = "scale(1)";
-    loginBtn.style.visibility = "1";
-    loginBtn.style.opacity = "1";
+function register(){
+    x.style.left = "-400px";
+    y.style.left = "50px";
+    z.style.left = "110px";
 }
 
-function openSignUpForm() {
-    signUpBtn.style.transform = "scale(1)";
-    signUpBtn.style.visibility = "1";
-    signUpBtn.style.opacity = "1";
+function loginform1(){
+    x.style.left = "50px";
+    y.style.left = "450px";
+    z.style.left = "0px";
+}
+
+const loginForm = document.getElementById("contain-form")
+const loginBox = document.getElementById("showform")
+
+function openLoginForm() {
+    loginForm.style.visibility = "visible";
+    loginBox.style.opacity = "1";
+    loginBox.style.transform = "translateY(0px)";
+    loginform1();
+}
+
+function openSignupForm() {
+    loginForm.style.visibility = "visible";
+    loginBox.style.opacity = "1";
+    loginBox.style.transform = "translateY(0px)";
+    register();
 }
 
 function closeLoginForm() {
-    loginBtn.style.transform = "scale(0)";
-    loginBtn.style.visibility = "0";
-    loginBtn.style.opacity = "0";
-
-}
-
-function closeSignUpForm() {
-    signUpBtn.style.transform = "scale(0)";
-    signUpBtn.style.visibility = "0";
-    signUpBtn.style.opacity = "0";
+    loginForm.style.visibility = "hidden";
+    loginBox.style.opacity = "0";
+    loginBox.style.transform = "translateY(-500px)";
 }
 
 window.onclick = function(event) {
-    if (event.target == loginBtn) {
+    if (event.target == loginForm) {
         closeLoginForm();
-        closeSignUpForm();
     }
 }
 
-function login(event) {
-    event.preventDefault();
-    const {uname, psw} = event.target.elements;
-    console.log(uname.value);
-    console.log(psw.value);
-    closeLoginForm();
-    alert("Wellcome " + uname.value)
-}
-
-const loginForm = document.getElementById("flg");
-loginForm.addEventListener('submit', login);
+function hidePage() {
+    let page = document.getElementsByClassName("commic-type");
+    let btn = document.getElementsByClassName("nav_content_link");
+    for (let item of page) {
+      item.style.visibility = "hidden";
+      item.style.opacity = "0";
+    }
+    for (let item of btn) {
+      item.style.backgroundColor = "#e4e4e4";
+    }
+  }
+  
+  function showPage(page, event) {
+    hidePage();
+    let pageComic = document.getElementById(page);
+    pageComic.style.visibility = "visible";
+    pageComic.style.opacity = "1";
+    event.target.style.backgroundColor = "#f9f9f9";
+  }
