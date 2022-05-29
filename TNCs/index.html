@@ -52,24 +52,24 @@
                     <i class="fa-brands fa-instagram"><a href="#"></a></i>
                     <i class="fa-brands fa-google"><a href="#"></a></i>
                 </div>
-                <form class="input-form" id="loginform1">
-                    <input type="email" class="input-id" placeholder="Nhập Email" required>
-                    <input type="password" class="input-id" placeholder="Nhập mật khẩu" required>
+                <form class="input-form" id="loginform">
+                    <input name="user" type="text" class="input-id" placeholder="Tên tài khoản hoặc Email" required>
+                    <input name="pw" type="password" class="input-id" placeholder="Nhập mật khẩu" required>
+                    <span><a class="forget-pass">Quên mật khẩu ?</a></span>
                     <input type="checkbox" class="check-box"><span class="checkbox-text">Nhớ tài khoản của
                         tôi</span><br>
                     <button type="submit" class="submit-btn">Đăng nhập</button>
-                    <span><a href="#" class="forget-pass">Quên mật khẩu ?</a></span>
                     <span class="pass-forget">Chưa có tài khoản? <a onclick="openSignupForm()">Đăng
                             kí</a></span>
                 </form>
                 <form class="input-form" id="register">
-                    <input type="text" class="input-id" placeholder="Tên tài khoản" required>
-                    <input type="email" class="input-id" placeholder="Nhập Email" required>
-                    <input type="password" class="input-id" placeholder="Nhập mật khẩu" required>
-                    <input type="password" class="input-id" placeholder="Xác nhận mật khẩu" required>
+                    <input name="user" type="text" class="input-id" placeholder="Tên tài khoản" minlength="6" required>
+                    <input name="email" type="email" class="input-id" placeholder="Nhập Email" required>
+                    <input name="pw" type="password" class="input-id" placeholder="Nhập mật khẩu" minlength="6" required>
+                    <input name="rpw" type="password" class="input-id" placeholder="Xác nhận mật khẩu" minlength="6" required>
                     <input type="checkbox" class="check-box" required><span class="checkbox-text">Tôi đồng ý với <a
-                            href="#">Điều khoản dịch vụ</a> & <a href="#">Chính sách bảo mật</a> </span>
-                    <button class="submit-btn">Đăng kí</button>
+                            href="#">Điều khoản dịch vụ</a> & <a>Chính sách bảo mật</a> </span>
+                    <button type="submit" class="submit-btn">Đăng kí</button>
                 </form>
             </div>
         </div>
@@ -3679,6 +3679,7 @@
     <!-- Footer End  -->
 
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="assets/lib/jquery/jquery.min.js"></script>
 <script src="assets/lib/owl_carousel/owl.carousel.min.js"></script>
 <script src="assets/js/index.js"></script>
