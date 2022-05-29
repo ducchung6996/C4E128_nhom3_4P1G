@@ -516,6 +516,7 @@ div h3 {
     display: flex;
     align-items: center;
     height: fit-content;
+    background-color: #e4e4e4;
 }
 
 .nav-comic-type>button {

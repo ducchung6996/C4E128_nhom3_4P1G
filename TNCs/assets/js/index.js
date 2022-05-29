@@ -32,7 +32,7 @@ function register() {
     z.style.left = "110px";
 }
 
-function loginform1() {
+function loginform() {
     x.style.left = "50px";
     y.style.left = "450px";
     z.style.left = "0px";
@@ -42,7 +42,7 @@ const loginForm = document.getElementById("contain-form");
 const loginBox = document.getElementById("showform");
 
 function openLoginForm() {
-    loginform1();
+    loginform();
     loginForm.style.visibility = "visible";
     loginBox.style.opacity = "1";
     loginBox.style.transform = "translateY(0px)";
