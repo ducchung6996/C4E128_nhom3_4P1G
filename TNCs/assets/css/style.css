@@ -148,7 +148,7 @@ header {
 
 #showform {
     width: 380px;
-    height: 480px;
+    height: 550px;
     position: relative;
     background: rgb(236, 180, 153);
     overflow: hidden;
@@ -173,6 +173,10 @@ header {
     border: 0;
     outline: none;
     position: relative;
+}
+
+.submit-btn:active {
+    transform: scale(0.96);
 }
 
 #btn {
@@ -210,14 +214,19 @@ header {
 
 .input-id {
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 5px;
     margin: 10px 0;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid #999;
     outline: none;
-    background: transparent;
+    transition: 0.4s;
+    background: none;
+}
+
+.input-id-error {
+    background-color: #ec6051;
 }
 
 .check-box {
@@ -235,34 +244,51 @@ header {
 }
 
 .forget-pass {
+    margin-bottom: 20px;
+    margin-left: 5px;
+    text-align: left;
     display: block;
-    margin: 20px 40px 10px 88px;
     color: #551f04;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .pass-forget {
-    margin-left: 50px;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
     color: #551f04;
 }
 
-.pass-forget a {
+.pass-forget>a {
+    font-weight: bold;
     color: #551f04;
+    cursor: pointer;
+}
+
+.pass-forget>a:hover {
+    text-decoration: underline;
+}
+
+.forget-pass:hover {
+    text-decoration: underline;
 }
 
 .submit-btn {
-    width: 85%;
+    width: 80%;
     padding: 10px 30px;
     cursor: pointer;
     display: block;
-    margin: auto;
-    margin-top: 20px;
+    margin: 20px 0;
     background: linear-gradient(to right, #d6aa89, #d6632a);
-    outline: none;
     border-radius: 30px;
+    margin-left: 50%;
+    transform: translate(-50%,0);
 }
 
-#loginform1 {
+#loginform {
     left: 50px;
+    margin-top: 30px;
 }
 
 #register {
