@@ -460,6 +460,10 @@ header {
     font-size: 16px;
 }
 
+.commic-type {
+    background: rgba( 255, 255, 255, 0.25 );
+}
+
 
 .comic-type p>a {
     color: #2980b9;
@@ -757,7 +761,6 @@ input:not(:checked)~label:hover~label {
     transition: 0.5s;
     visibility: visible;
     opacity: 1;
-    background: rgba( 255, 255, 255, 0.25 );
 }
 
 /* side-bar start */

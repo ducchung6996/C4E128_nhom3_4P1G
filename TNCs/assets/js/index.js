@@ -89,7 +89,7 @@ function showPage(page, event) {
     let pageComic = document.getElementById(page);
     pageComic.style.visibility = "visible";
     pageComic.style.opacity = "1";
-    event.target.style.backgroundColor = "#f9f9f9";
+    event.target.style.backgroundColor = "#rgba(253, 2, 2)";
 }
 
 const loginWindow = document.getElementById("loginform");
