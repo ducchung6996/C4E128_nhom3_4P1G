@@ -26,6 +26,7 @@ header {
     height: 70px;
     z-index: 2;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     position: fixed;
     padding: 0 10vw;
@@ -34,17 +35,9 @@ header {
 }
 
 #logo .group-name {
-    color: #fff;
-    line-height: 65px;
-    font-size: 30px;
-    height: 65px; 
-    width: 68px;
+    height: 63px;
+    width: auto;
 }
-
-#logo>a {
-    text-decoration: none;
-}
-
 
 .search-box-container {
     height: 56px;
@@ -425,11 +418,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 8px;
 }
 
 .comic-name a {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     color: #d42f2a; 
 
@@ -438,6 +431,14 @@ header {
 .comic-name a:hover {
     text-decoration: underline;
     text-decoration-thickness: 1px;
+}
+
+.author {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    height: fit-content;
 }
 
 .author a {
@@ -498,7 +499,9 @@ header {
 
 .desciption{
     overflow: hidden;
-    
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 /* main content start */
@@ -794,7 +797,7 @@ input:not(:checked)~label:hover~label {
     height: 100px;
 }
 
-.author{
+.author-sidebar{
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -814,9 +817,7 @@ input:not(:checked)~label:hover~label {
 
 h2 {
     margin-bottom: 20px;
-
 }
-
 
 /* footer start */
 footer {
