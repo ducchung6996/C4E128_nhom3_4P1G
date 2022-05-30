@@ -878,8 +878,8 @@ h2 {
     text-align: left;
     margin-bottom: 10px;
     font-size: 30px;
-    color: #f4f3e3;
-    text-shadow: 4px 4px #d6632a;
+    color: #fff;
+    text-shadow: 4px 4px #c9413c;
     text-transform: uppercase;
 }
 
@@ -887,10 +887,11 @@ h2 {
     height: 40px;
     margin: 8px 4px;
     font-size: 18px;
-    background-color: antiquewhite;
-    box-shadow: 4px 6px #999;
+    background-color: #d4150e;
+    box-shadow: 2px 4px #f4e9e9;
     cursor: pointer;
     padding: 0 5px;
+    color: #fff; 
 }
 
 #keywords button:hover {
