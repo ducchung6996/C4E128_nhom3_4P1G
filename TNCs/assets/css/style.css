@@ -420,11 +420,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 8px;
 }
 
 .comic-name a {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     color: #fff; 
 
@@ -433,6 +433,14 @@ header {
 .comic-name a:hover {
     text-decoration: underline;
     text-decoration-thickness: 1px;
+}
+
+.author {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    height: fit-content;
 }
 
 .author a {
@@ -494,7 +502,9 @@ header {
 
 .desciption{
     overflow: hidden;
-    
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 /* main content start */
@@ -791,7 +801,7 @@ input:not(:checked)~label:hover~label {
     height: 100px;
 }
 
-.author{
+.author-sidebar{
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -811,9 +821,7 @@ input:not(:checked)~label:hover~label {
 
 h2 {
     margin-bottom: 20px;
-
 }
-
 
 /* footer start */
 footer {
