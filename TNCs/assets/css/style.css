@@ -23,7 +23,7 @@ header {
 
 #header {
     width: 100%;
-    height: 65px;
+    height: 70px;
     z-index: 2;
     display: flex;
     justify-content: space-between;
@@ -818,8 +818,12 @@ footer img {
 }
 
 .footer-container {
-    bottom: 0;
     display: flex;
+    width: 100%;
+    bottom: 0;
+    height: fit-content;
+    padding: 20px 0;
+
 }
 
 .left-footer {
@@ -844,7 +848,9 @@ footer img {
 }
 
 .coppyright {
-    color: black;
+    color: #fff;
+    width: fit-content;
+    white-space: nowrap;
 }
 
 .keywords-title {
