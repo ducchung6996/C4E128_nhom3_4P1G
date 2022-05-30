@@ -31,12 +31,12 @@ header {
     position: fixed;
     padding: 0 10vw;
     margin-bottom: 200px;
-    background-color: #000;
+    background-color: #3f3f42;
 }
 
 #logo .group-name {
-    height: 63px;
-    width: auto;
+    height: 65px;
+    width: 80px; 
 }
 
 .search-box-container {
@@ -820,15 +820,15 @@ h2 {
 }
 
 /* footer start */
-footer {
+#footer {
     width: 100%;
     bottom: 0;
     height: fit-content;
-    background-color: rgb(243, 210, 166);
+    background-color: #3f3f42;
     padding: 30px 0;
 }
 
-footer img {
+#footer img {
     height: 100px;
     position: relative;
 }
@@ -839,7 +839,6 @@ footer img {
     bottom: 0;
     height: fit-content;
     padding: 20px 0;
-
 }
 
 .left-footer {
