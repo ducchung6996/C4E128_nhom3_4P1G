@@ -34,8 +34,16 @@ header {
     background-color: #3f3f42;
 }
 
-#logo .group-name {
-    height: 65px;
+#header>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+.group-name {
+    height: auto;
     width: 80px; 
 }
 
