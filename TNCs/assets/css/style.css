@@ -34,8 +34,16 @@ header {
     background-color: #3f3f42;
 }
 
-#logo .group-name {
-    height: 65px;
+#header>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+.group-name {
+    height: auto;
     width: 80px; 
 }
 
@@ -833,9 +841,11 @@ h2 {
     padding: 30px 0;
 }
 
-#footer img {
-    height: 100px;
-    position: relative;
+.footer-img {
+    width: 100px;
+    height: auto;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .footer-container {
@@ -848,9 +858,9 @@ h2 {
 
 .left-footer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-self: center;
+    justify-content: center;
+    flex-direction: column;
     padding-left: 100px;
     padding-right: 50px;
     height: fit-content;
