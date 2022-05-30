@@ -329,6 +329,7 @@ header {
     font-size: 28px;
     text-align: justify;
     color: #fff;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 /* slider content */
 
@@ -534,7 +535,7 @@ div h3 {
     display: flex;
     align-items: center;
     height: fit-content;
-    background: rgba(253, 2, 2);
+    background: #d42f2a;
 }
 
 .nav-comic-type>button {
@@ -691,6 +692,7 @@ input:not(:checked)~label:hover~label {
 
 .new_chap_link {
     text-transform: capitalize;
+    color: #fff; 
 }
 
 .new_chap>span {
@@ -700,7 +702,7 @@ input:not(:checked)~label:hover~label {
 
 .hour {
     text-align: right;
-    color: #333;
+    color: rgb(224, 188, 188);
 }
 
 #codai {
