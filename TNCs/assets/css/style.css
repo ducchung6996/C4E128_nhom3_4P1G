@@ -457,7 +457,9 @@ header {
     display: flex;
     flex-wrap: wrap;
     font-size: 16px;
+    
 }
+
 
 .comic-type p>a {
     color: #2980b9;
@@ -493,6 +495,11 @@ header {
 
 .chapter a:hover {
     background-color: #b6babb;
+}
+
+.desciption{
+    overflow: hidden;
+    
 }
 
 /* main content start */
@@ -763,44 +770,49 @@ input:not(:checked)~label:hover~label {
     box-shadow: 0px 0px 8px 8px rgba(185, 185, 185, 0.75);
 }
 
-.btn_list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn {
-    background: none;
-    width: 33.33%;
-    border: none;
+.upcoming{
+    width: 100%;
     height: 50px;
+    border: none;
     background-color: #e4e4e4;
 }
-
-.ex_active:active {
-    background-color: #f9f9f9;
+.toplist{
+    margin:20px 10px ;
 }
-
-.list {
+.list{
     display: flex;
-    width: 100%;
-    align-items: center;
+    justify-content: flex-start;
 }
-
-.number {
-    text-align: center;
-    width: 16%;
-    font-size: 50px;
-    line-height: 100px;
+.listcontent{
+    margin: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-items:flex-start;
+    justify-content: space-between;
 }
-
 .side-bar-img {
     width: auto;
     height: 100px;
 }
 
-.number1 {
-    color: blue;
+.author{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
+.author-content{
+    width: 30%;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.author-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
 
 h2 {
     margin-bottom: 20px;
