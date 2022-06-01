@@ -84,17 +84,13 @@ header {
     padding-left: 10px;
 }
 
-#login {
-    line-height: 60px;
-}
-
-#login .login-btn,
-#login .signin-btn {
+.login-btn,.signin-btn {
     background-color:#d42f2a ;
     height: 40px;
     cursor: pointer;
     padding-right: 10px;
-    color: #fff; 
+    color: #fff;
+    transition: 0.4s;
 }
 
 #login .login-btn:hover {
@@ -125,6 +121,150 @@ header {
     transition: 0.5s;
 }
 
+#login {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#user-menu {
+    display: none;
+    background-color: antiquewhite;
+    height: fit-content;
+    width: 100%;
+    cursor: pointer;
+    border: solid 2px #95a5a6;
+    position: relative;
+    transition: 0.4s;
+    animation-name: fadein;
+    animation-duration: 0.3s;
+}
+
+#user-menu:hover {
+}
+
+#user-menu>p {
+    display: flex;
+    align-items: center;
+    padding: 10px 8px;
+    cursor: pointer;
+    width: 100%;
+    background-color:#d42f2a ;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s;
+}
+
+#login-singup {
+    display: none;
+    width: fit-content;
+    animation-name: fadein;
+    animation-duration: 0.3s;
+}
+
+@keyframes fadein {
+    from{transform: translateY(-300px); opacity: 0;}
+    to{transform: translateY(0); opacity: 1;}
+}
+
+.user-profile {
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: 0.4s;
+}
+
+#user-menu:hover .user-profile {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.user-profile>a {
+    width: 100%;
+    padding: 10px 0;
+    height: fit-content;
+    background-color: #d42f2a;
+    border-top: 1px solid #95a5a6;
+    box-sizing: content-box;
+    cursor: pointer;
+    color: #fff;
+}
+
+.email-change {
+    border-right: 2px solid #95a5a6;
+    border-left: 2px solid #95a5a6;
+}
+
+.signout {
+    border-right: 2px solid #95a5a6;
+    border-left: 2px solid #95a5a6;
+    border-bottom: 2px solid #95a5a6;
+}
+
+.user-profile>a:hover {
+    text-decoration: underline;
+}
+
+#welcome {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+#pw-change {
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    background-color: rgba(202, 199, 199, 0.4);
+}
+
+#new-pw {
+    background: #91242d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 30px;
+    transform: translateY(-500px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#new-pw>p {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px 0;
+    color: #fff;
+}
+
+#new-pw>input {
+    width: 280px;
+}
+
+#new-pw>div {
+    width: 100%;
+}
 
 #contain-form {
     z-index: 3;
@@ -167,10 +307,6 @@ header {
     outline: none;
     position: relative;
     color: #fff; 
-}
-
-.submit-btn:active {
-    transform: scale(0.96);
 }
 
 #btn {
@@ -217,9 +353,8 @@ header {
     outline: none;
     transition: 0.4s;
     background: none;
-    color: #fff; 
+    color: #fff;
 }
-
 
 .input-id-error {
     background-color: #ffffff;
@@ -236,7 +371,7 @@ header {
 }
 
 .checkbox-text a {
-    color: rgb(223, 129, 129);
+    color: rgb(225 168 168);
     cursor: pointer; 
 }
 
@@ -264,7 +399,7 @@ header {
 
 .pass-forget>a {
     font-weight: bold;
-    color: rgb(223, 129, 129);
+    color: rgb(225 168 168);
     cursor: pointer;
 }
 
@@ -277,7 +412,7 @@ header {
 }
 
 .submit-btn {
-    width: 80%;
+    width: 60%;
     padding: 10px 30px;
     cursor: pointer;
     display: block;
@@ -286,6 +421,10 @@ header {
     border-radius: 30px;
     margin-left: 50%;
     transform: translate(-50%,0);
+}
+
+.submit-btn:active {
+    background: linear-gradient(to right, rgb(241, 235, 235), #d86e76);
 }
 
 #loginform {

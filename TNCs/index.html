@@ -19,15 +19,37 @@
                 <img class="group-name" src="assets/image/Logo.jpg">
             </a>
             <div id="login">
-                <button class="login-btn" onclick="openLoginForm()"><i
-                        class="fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</button>
-                <button class="signin-btn" onclick="openSignupForm()"><i class="fa-solid fa-key"></i>Đăng kí</button>
+                <div id="user-menu">
+                    <p>Chào mừng <span id="welcome">User</span></p>
+                    <div class="user-profile">
+                        <a class="email-change" onclick="openPwChangeForm()">Đổi mật khẩu <i class="fa-solid fa-key"></i></a>
+                        <a class="signout" onclick="logout()">Đăng xuất <i class="fa-solid fa-door-open"></i></a>
+                    </div>
+                </div>
+                <div id="login-singup">
+                    <button class="login-btn" onclick="openLoginForm()">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Đăng nhập</button>
+                    <button class="signin-btn" onclick="openSignupForm()"><i class="fa-solid fa-key"></i> Đăng kí</button>
+                </div>
             </div>
         </div>
         <!-- Header End -->
 
         <!-- Login/signup Form Start -->
-        <div class="form-container" id="contain-form">
+        <div id="pw-change">
+            <form id="new-pw">
+                <p>Thay đổi mật khẩu</p>
+                <input name="user" type="text" class="input-id" placeholder="Tên tài khoản" required>
+                <input name="email" type="email" class="input-id" placeholder="Nhập Email" required>
+                <input name="pw" type="password" class="input-id" placeholder="Nhập mật khẩu mới" minlength="6" required>
+                <input name="rpw" type="password" class="input-id" placeholder="Xác nhận mật khẩu" minlength="6" required>
+                <div>
+                    <button type="submit" class="submit-btn">OK</button>
+                    <button onclick="closeLoginForm()" class="submit-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div id="contain-form">
             <div class="form-box" id="showform">
                 <i class="fa-solid fa-xmark" onclick="closeLoginForm()"></i>
                 <div class="buttion-box">
@@ -43,9 +65,9 @@
                 <form class="input-form" id="loginform">
                     <input name="user" type="text" class="input-id" placeholder="Tên tài khoản hoặc Email" required>
                     <input name="pw" type="password" class="input-id" placeholder="Nhập mật khẩu" required>
-                    <span><a class="forget-pass">Quên mật khẩu ?</a></span>
-                    <input type="checkbox" class="check-box"><span class="checkbox-text">Nhớ tài khoản của
-                        tôi</span><br>
+                    <span><a onclick="openPwChangeForm()" class="forget-pass">Quên mật khẩu ?</a></span>
+                    <input id="remember" type="checkbox" class="check-box"><span class="checkbox-text">Nhớ tài khoản của
+                        tôi</span>
                     <button type="submit" class="submit-btn">Đăng nhập</button>
                     <span class="pass-forget">Chưa có tài khoản? <a onclick="openSignupForm()">Đăng
                             kí</a></span>
@@ -56,7 +78,7 @@
                     <input name="pw" type="password" class="input-id" placeholder="Nhập mật khẩu" minlength="6" required>
                     <input name="rpw" type="password" class="input-id" placeholder="Xác nhận mật khẩu" minlength="6" required>
                     <input type="checkbox" class="check-box" required><span class="checkbox-text">Tôi đồng ý với <a
-                            href="#"><b>Điều khoản dịch vụ</b></a> & <a><b>Chính sách bảo mật</b></a> </span>
+                            href="#">Điều khoản dịch vụ</a> & <a>Chính sách bảo mật</a> </span>
                     <button type="submit" class="submit-btn">Đăng kí</button>
                 </form>
             </div>

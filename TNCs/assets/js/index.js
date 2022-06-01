@@ -40,6 +40,8 @@ function loginform() {
 
 const loginForm = document.getElementById("contain-form");
 const loginBox = document.getElementById("showform");
+const pwChangeForm = document.getElementById("pw-change");
+const pwChangeBox = document.getElementById("new-pw");
 
 function openLoginForm() {
     loginform();
@@ -55,16 +57,27 @@ function openSignupForm() {
     loginBox.style.transform = "translateY(0px)";
 }
 
+function openPwChangeForm() {
+    closeLoginForm()
+    pwChangeForm.style.visibility = "visible";
+    pwChangeBox.style.opacity = "1";
+    pwChangeBox.style.transform = "translateY(0px)";
+}
+
 function closeLoginForm() {
+    pwChangeForm.style.visibility = "hidden";
+    pwChangeBox.style.opacity = "0";
+    pwChangeBox.style.transform = "translateY(-500px)";
     loginForm.style.visibility = "hidden";
     loginBox.style.opacity = "0";
     loginBox.style.transform = "translateY(-500px)";
     document.getElementById("loginform").reset();
     document.getElementById("register").reset();
+    document.getElementById("new-pw").reset();
 }
 
 window.onclick = function (event) {
-    if (event.target == loginForm) {
+    if (event.target == loginForm || event.target == pwChangeForm) {
         closeLoginForm();
     }
 }
@@ -72,16 +85,13 @@ window.onclick = function (event) {
 function hidePage() {
     let page = document.getElementsByClassName("commic-type");
     let btn = document.getElementsByClassName("nav_content_link");
-    let allType = document.getElementById("all-type");
     for (let item of page) {
         item.style.visibility = "hidden";
         item.style.opacity = "0";
     }
     for (let item of btn) {
-        item.style.backgroundColor = "#e4e4e4";
+        item.style.backgroundColor = "#d42f2a";
     }
-    allType.style.visibility = "hidden";
-    allType.style.opacity = "0";
 }
 
 function showPage(page, event) {
@@ -89,20 +99,44 @@ function showPage(page, event) {
     let pageComic = document.getElementById(page);
     pageComic.style.visibility = "visible";
     pageComic.style.opacity = "1";
-    event.target.style.backgroundColor = "#rgba(253, 2, 2)";
+    event.target.style.backgroundColor = "#f9f9f9";
 }
 
 const loginWindow = document.getElementById("loginform");
 const signupWindow = document.getElementById("register");
 const inputBox = document.getElementsByClassName("input-id");
+const loginBtns = document.getElementById("login-singup");
+const userBtns = document.getElementById("user-menu");
+const userName = document.getElementById("welcome");
+
+if (localStorage.getItem("rememberUser")){
+    const rememberedUser = localStorage.getItem("rememberUser");
+    userName.innerText = rememberedUser;
+    successLogin();
+} else {
+    logout()
+}
+
+function successLogin() {
+    loginBtns.style.display = "none";
+    userBtns.style.display = "block";
+}
+
+function logout() {
+    loginBtns.style.display = "block";
+    userBtns.style.display = "none";
+    localStorage.removeItem("rememberUser");
+}
 
 for (let item of inputBox) {
-    item.addEventListener("keypress", () => {item.style.background = "none";});
+    item.addEventListener("input", () => { item.style.background = "none"; });
 }
 
 function login(event) {
     event.preventDefault()
-    const { user, pw } = event.target.elements;
+    const {user, pw, remember} = event.target.elements;
+    const userProfile = JSON.parse(localStorage.getItem(user.value));
+
     if (localStorage.getItem(user.value) == undefined) {
         swal({
             title: "Ops",
@@ -114,16 +148,22 @@ function login(event) {
         return;
     }
 
-    const userProfile = JSON.parse(localStorage.getItem(user.value))
-
-    if (userProfile.pw === pw.value) {
+    if (userProfile.user != undefined) {
         swal({
             title: "Welcome",
             text: `Chào mừng ${userProfile.user}`,
             icon: "success",
             button: "Yesssss",
         });
-        closeLoginForm();
+        userName.innerText = userProfile.user;
+    } else if (userProfile.pw === pw.value) {
+        swal({
+            title: "Welcome",
+            text: `Chào mừng ${user.value}`,
+            icon: "success",
+            button: "Yesssss",
+        });
+        userName.innerText = user.value;
     } else {
         swal({
             title: "Nope",
@@ -132,7 +172,17 @@ function login(event) {
             button: "Nani ?",
         });
         pw.style.background = "#ec6051";
+        return;
     }
+
+    if (remember.checked == true && userProfile.user != undefined) {
+        localStorage.setItem("rememberUser", userProfile.user)
+    } else if (remember.checked == true) {
+        localStorage.setItem("rememberUser", user.value)
+    }
+
+    closeLoginForm();
+    successLogin();
 }
 
 loginWindow.addEventListener('submit', login)
@@ -149,6 +199,18 @@ function checkIfStringHasSpecialChar(string) {
 function signup(event) {
     event.preventDefault()
     const { user, email, pw, rpw } = event.target.elements;
+    
+    if (pw.value.includes(" ")) {
+        swal({
+            title: "Nah",
+            text: "Mật khẩu không được có dấu cách",
+            icon: "error",
+            button: "Lmao",
+        });
+        pw.style.background = "#ec6051";
+        return;
+    }
+
     if (pw.value !== rpw.value) {
         swal({
             title: "Nah",
@@ -215,3 +277,77 @@ function signup(event) {
 }
 
 signupWindow.addEventListener('submit', signup)
+
+function changePassword(event) {
+    event.preventDefault()
+    const { user, email, pw, rpw } = event.target.elements;
+    if (localStorage.getItem(user.value) == undefined) {
+        swal({
+            title: "Ops",
+            text: "Tài khoản này không tồn tại",
+            icon: "error",
+            button: "Damn son",
+        });
+        user.style.background = "#ec6051";
+        return;
+    }
+
+    const userProfile = JSON.parse(localStorage.getItem(user.value))
+
+    if (email.value !== userProfile.email) {
+        swal({
+            title: "Nah",
+            text: "Bạn đã nhập sai email",
+            icon: "error",
+            button: "Nani ?",
+        });
+        email.style.background = "#ec6051";
+        return;
+    }
+    
+    if (pw.value.includes(" ")) {
+        swal({
+            title: "Nah",
+            text: "Mật khẩu không được có dấu cách",
+            icon: "error",
+            button: "Lmao",
+        });
+        pw.style.background = "#ec6051";
+        return;
+    }
+
+    if (pw.value !== rpw.value) {
+        swal({
+            title: "Nah",
+            text: "Mật khẩu xác nhận chưa đúng",
+            icon: "error",
+            button: "Lmao",
+        });
+        rpw.style.background = "#ec6051";
+        return;
+    }
+
+    const userChangeProfile = {
+        email: email.value,
+        pw: pw.value,
+    }
+
+    const userEmailProfile = {
+        user: user.value,
+        pw: pw.value,
+    }
+
+    localStorage.setItem(user.value, JSON.stringify(userChangeProfile));
+    localStorage.setItem(email.value, JSON.stringify(userEmailProfile));
+    swal({
+        title: "Done",
+        text: "Thay đổi mật khẩu thành công",
+        icon: "success",
+        button: "Oke la",
+    });
+    closeLoginForm();
+
+}
+
+pwChangeBox.addEventListener('submit', changePassword)
+
