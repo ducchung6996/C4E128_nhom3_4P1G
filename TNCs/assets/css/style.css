@@ -765,11 +765,6 @@ div h3 {
     border: solid 1px #707070;
 }
 
-.summary-left {
-    width: 200px;
-    right: 200px;
-}
-
 .rate {
     display: flex;
     justify-content: space-between;
@@ -915,7 +910,7 @@ input:not(:checked)~label:hover~label {
 
 /* side-bar start */
 .slide_bar {
-    width: auto;
+    width: 30%;
     height: 1044px;
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0px 0px 8px 8px rgba(185, 185, 185, 0.75);
