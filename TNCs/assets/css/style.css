@@ -610,8 +610,17 @@ header {
 
 .commic-type {
     background: rgba( 255, 255, 255, 0.25 );
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 10px;
 }
 
+.commic-type>div {
+    width: fit-content;
+    height: fit-content;
+}
 
 .comic-type p>a {
     color: #2980b9;
@@ -657,8 +666,6 @@ header {
 }
 
 /* main content start */
-
-
 div h3 {
     text-transform: uppercase;
 }
@@ -671,6 +678,7 @@ div h3 {
 }
 
 .main-content {
+    width: 70%;
     height: fit-content;
     position: relative;
     display: flex;
@@ -690,8 +698,8 @@ div h3 {
     border: none;
     cursor: pointer;
     transform: 0.4s;
-    width: 230px;
-    height: 50px;
+    padding: 16px 0;
+    flex-grow: 1;
     font-weight: bold;
     font-size: 16px;
     transition: 0.4s;
@@ -701,14 +709,7 @@ div h3 {
     background-color: #f9f9f9;
 }
 
-.wrapper_content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    height: fit-content;
-}
-
 .img_comic>img {
-    margin-top: 10px;
     height: 300px;
     width: 200px;
     border-radius: 10px;
@@ -742,7 +743,7 @@ div h3 {
     height: fit-content;
     position: absolute;
     top: 10px;
-    right: -190px;
+    left: -140px;
     z-index: 1;
     padding: 5px;
     visibility: hidden;
@@ -816,7 +817,7 @@ input:not(:checked)~label:hover~label {
 }
 
 .name_comic>h3 {
-    height: 44px;
+    height: 42px;
     text-align: center;
     width: 200px;
     overflow: hidden;
