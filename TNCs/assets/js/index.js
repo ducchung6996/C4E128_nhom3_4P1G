@@ -1,4 +1,4 @@
-var owl = $('.owl-carousel');
+var owl = $('.owl-one');
 owl.owlCarousel({
     loop: true,
     nav: false,
@@ -21,6 +21,29 @@ owl.owlCarousel({
         }
     }
 });
+
+// var owlTwo = $('.owl-two');
+// owlTwo.owlCarousel({
+//     loop: true,
+//     nav: false,
+//     dots: false,
+//     autoplay: true,
+//     center: true,
+//     margin: 30,
+//     autoplayTimeout: 4000,
+//     autoplayHoverPause: true,
+//     responsive: {
+//         0: {
+//             items: 1
+//         },
+//         1200: {
+//             items: 2
+//         },
+//         1800: {
+//             items: 3
+//         }
+//     }
+// });
 
 var x = document.getElementById("loginform");
 var y = document.getElementById("register");
@@ -90,7 +113,7 @@ function hidePage() {
         item.style.opacity = "0";
     }
     for (let item of btn) {
-        item.style.backgroundColor = "#d42f2a";
+        item.style.backgroundColor = "#91242d";
     }
 }
 
