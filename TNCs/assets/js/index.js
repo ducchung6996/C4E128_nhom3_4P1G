@@ -22,25 +22,21 @@ $('.owl-one').owlCarousel({
 });
 
 $('.owl-two').owlCarousel({
-    loop: true,
-    nav: false,
-    dots: false,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
     animateOut: 'slideOutDown',
     animateIn: 'flipInX',
     items:1,
+    margin:30,
+    stagePadding:30,
     smartSpeed:450,
     responsive: {
         0: {
             items: 1
         },
         1200: {
-            items: 2
+            items: 1
         },
         1800: {
-            items: 3
+            items: 1
         }
     }
 });

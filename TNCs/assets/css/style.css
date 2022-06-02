@@ -1041,6 +1041,13 @@ h2 {
 
 /* Slide footer  */
 
+.owl-two {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+}
+
 .slider-footer-container {
     width: 100%;
     height: fit-content;
