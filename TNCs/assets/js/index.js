@@ -1,5 +1,4 @@
-var owl = $('.owl-one');
-owl.owlCarousel({
+$('.owl-one').owlCarousel({
     loop: true,
     nav: false,
     dots: false,
@@ -22,28 +21,29 @@ owl.owlCarousel({
     }
 });
 
-// var owlTwo = $('.owl-two');
-// owlTwo.owlCarousel({
-//     loop: true,
-//     nav: false,
-//     dots: false,
-//     autoplay: true,
-//     center: true,
-//     margin: 30,
-//     autoplayTimeout: 4000,
-//     autoplayHoverPause: true,
-//     responsive: {
-//         0: {
-//             items: 1
-//         },
-//         1200: {
-//             items: 2
-//         },
-//         1800: {
-//             items: 3
-//         }
-//     }
-// });
+$('.owl-two').owlCarousel({
+    loop: true,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:1,
+    smartSpeed:450,
+    responsive: {
+        0: {
+            items: 1
+        },
+        1200: {
+            items: 2
+        },
+        1800: {
+            items: 3
+        }
+    }
+});
 
 var x = document.getElementById("loginform");
 var y = document.getElementById("register");
