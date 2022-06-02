@@ -86,7 +86,7 @@ header {
 
 .login-btn,.signin-btn {
     padding: 10px;
-    background-color:#d42f2a ;
+    background-color:#91242d ;
     height: 40px;
     cursor: pointer;
     color: #fff;
@@ -147,7 +147,7 @@ header {
     padding: 10px 8px;
     cursor: pointer;
     width: 100%;
-    background-color:#d42f2a ;
+    background-color:#91242d ;
     cursor: pointer;
     color: #fff;
     transition: 0.4s;
@@ -189,7 +189,7 @@ header {
     width: 100%;
     padding: 10px 0;
     height: fit-content;
-    background-color: #d42f2a;
+    background-color: #91242d;
     border-top: 1px solid #95a5a6;
     box-sizing: content-box;
     cursor: pointer;
@@ -252,6 +252,7 @@ header {
     font-size: 18px;
     padding: 20px 0;
     color: #fff;
+    
 }
 
 #new-pw>input {
@@ -311,7 +312,7 @@ header {
     position: absolute;
     width: 110px;
     height: 100%;
-    background: linear-gradient(to right, rgb(236, 189, 189), #de4350);
+    background: linear-gradient(to right, rgb(236, 189, 189), #aa0e1b);
     border-radius: 30px;
     transition: 0.4s;
 }
@@ -413,14 +414,14 @@ header {
     cursor: pointer;
     display: block;
     margin: 20px 0;
-    background: linear-gradient(to right, rgb(236, 189, 189), #de4350);
+    background: linear-gradient(to right, rgb(236, 189, 189), #aa0e1b);
     border-radius: 30px;
     margin-left: 50%;
     transform: translate(-50%,0);
 }
 
 .submit-btn:active {
-    background: linear-gradient(to right, rgb(241, 235, 235), #d86e76);
+    background: linear-gradient(to right, rgb(241, 235, 235), #aa0e1b);
 }
 
 #loginform {
@@ -700,7 +701,7 @@ div h3 {
 
 .nav-comic-type>button {
     width: fit-content;
-    background: rgb(212, 47, 42);
+    background: #91242d;
     border: none;
     cursor: pointer;
     transform: 0.4s;
@@ -941,7 +942,7 @@ input:not(:checked)~label:hover~label {
     width: 100%;
     height: 50px;
     border: none;
-    background-color: #ee3221;
+    background-color: #91242d;
     font-size: 14px;
     color: #fff;
     font-weight: bold;
@@ -1006,79 +1007,116 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* footer start */
-#footer {
+/* Slide footer  */
+
+#slider-footer-container {
     width: 100%;
-    bottom: 0;
-    height: fit-content;
-    background-color: #3f3f42;
-    padding: 30px 0;
-}
-
-.footer-img {
-    width: 100px;
-    height: auto;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.footer-container {
+    height: 600px;
     display: flex;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+  .slide-footer {
+    height: 500px;
     width: 100%;
-    bottom: 0;
-    height: fit-content;
-    padding: 20px 0;
-}
-
-.left-footer {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 100px;
-    padding-right: 50px;
-    height: fit-content;
-    width: fit-content;
-}
-
-.right-footer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-right: 100px;
-}
-
-.coppyright {
-    color: #fff;
-    width: fit-content;
-    white-space: nowrap;
-}
-
-.keywords-title {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 10px;
-    font-size: 30px;
-    color: #fff;
-    text-shadow: 4px 4px #c9413c;
-    text-transform: uppercase;
-}
-
-#keywords button {
-    height: 40px;
-    margin: 8px 4px;
-    font-size: 18px;
-    background-color: #d4150e;
-    box-shadow: 2px 4px #f4e9e9;
-    cursor: pointer;
-    padding: 0 5px;
+    background-color: #91242d;
+    font-family: "Greta Sans Condensed Bold", "Greta Sans Bold", Arial, sans-serif;
     color: #fff; 
+    display:flex; 
+  }
+  
+  .add-img {
+    height: 600px;
+    position: absolute;
+    right: 400px;
+  }
+  
+  .character-info {
+    width: 400px;
+    margin: 120px 0 0 400px;
+  }
+  
+  .get-to-know {
+    font-size: 20px;
+    font-weight: 600;
+    color:#80776e; 
+
+  }
+  
+  .character-name {
+    font-size: 42px;
+    font-weight: bolder;
+  }
+  
+  .character-info {
+    font-size: 22px;
+  }
+  /* #84253c */
+  .slide-footer button {
+      background-color: #80776e; 
+      height: 50px;
+      width: 140px;  
+      margin-top: 20px;
+      color: #fff; 
+      font-size: 16px;
+  }
+
+  .footer{
+      color:#91242d; 
+      height: 200px;  
+      width: 100%; 
+      background-image: url('/C4E128_nhom3_TNCs/TNCs/assets/image/Wolf.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%; 
+  }
+
+  .footer-title{
+text-align: center;
+font-size: 36px;
+    gap: 20px; 
+    color:#fff; 
 }
 
-#keywords button:hover {
-    transform: translateY(4px);
-    background-color: #c7977e;
+.title-container{
+    position: absolute; 
+}
+
+
+
+.social-media{
+    width: 100%; 
+    text-align: center;
+}
+
+.fa-brands{
+    margin: 40px 20px 10px 20px; 
+    font-size: 30px;
+    color:#91242d;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; 
+    padding-top: 5px;
+}
+
+.fa-brands:hover{
+    background-color: #91242d;
+    color: #fff;
+    cursor: pointer; 
+}
+
+.fa-github-alt{
+    background-color: #fff;
+}
+
+.hr, .copyright{
+    text-align: center;
+    color: #fff;
+
+}
+
+.copyright{
+    font-size: 16px;
+    margin-top: 10px;
+    color:#91242d;
 }
