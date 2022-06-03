@@ -489,12 +489,19 @@ header {
 
 /* slider content */
 
+.slide-footer-box {
+    display: flex;
+    width: 100vw;
+    height: 600px;
+    align-items: flex-end;
+}
+
 .slider-content {
-    margin-bottom: 120px;
+    margin-bottom: 150px;
 }
 
 .owl-item {
-    padding: 90px 0 30px 0;
+    padding: 70px 0 30px 0;
 }
 
 .other-container {
@@ -709,7 +716,6 @@ div h3 {
 }
 
 .main-content {
-    margin-bottom: 8%;
     width: 70%;
     height: fit-content;
     position: relative;
@@ -1038,15 +1044,18 @@ h2 {
 
 /* Slide footer  */
 
+.owl-two {
+    margin-bottom: 50px;
+}
+
 .slider-footer-container {
     width: 100vw;
     height: 440px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 50px 0;
     position: relative;
-    padding: 0 25%;
+    padding: 0 25vw;
     background-color: #91242d;
 }
 
@@ -1108,9 +1117,6 @@ h2 {
     color: #91242d;
     height: 200px;
     width: 100%;
-    background-image: linear-gradient(90deg, #1565C0, #b92b27);
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
 }
 
