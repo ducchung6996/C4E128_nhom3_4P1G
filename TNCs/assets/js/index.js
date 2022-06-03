@@ -6,7 +6,7 @@ $('.owl-one').owlCarousel({
     center: true,
     margin: 30,
     autoWidth: true,
-    autoplayTimeout: 4000,
+    autoplayTimeout: 5000,
     autoplayHoverPause: true,
     responsive: {
         0: {
@@ -22,12 +22,13 @@ $('.owl-one').owlCarousel({
 });
 
 $('.owl-two').owlCarousel({
-    animateOut: 'slideOutDown',
-    animateIn: 'flipInX',
-    items:1,
-    margin:30,
-    stagePadding:30,
-    smartSpeed:450,
+    loop: true,
+    nav: true,
+    dots: false,
+    autoplay: false,
+    center: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
     responsive: {
         0: {
             items: 1
