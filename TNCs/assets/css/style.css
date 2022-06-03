@@ -1078,11 +1078,17 @@ h2 {
     width: 470px;
 }
 
+.male-hero, .blue-hero{
+  height: 600px; 
+  width: auto; 
+}
+
+
+
 .get-to-know {
     font-size: 20px;
     font-weight: 600;
     color: #80776e;
-
 }
 
 .character-name {
@@ -1097,7 +1103,6 @@ h2 {
 
 }
 
-/* #84253c */
 .slide-footer>button {
     cursor: pointer;
     background-color: #5a544e;
