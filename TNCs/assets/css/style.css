@@ -1078,10 +1078,10 @@ input:not(:checked)~label:hover~label {
 
 .slider-footer-container {
     width: 100vw;
-    height: 440px;
+    height: 460px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 5%;
     align-items: flex-end;
     position: relative;
     background-color: #91242d;
