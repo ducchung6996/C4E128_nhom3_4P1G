@@ -1102,8 +1102,8 @@ input:not(:checked)~label:hover~label {
 }
 
 .add-img {
-    height: auto;
-    width: 470px;
+    height: 600px;
+    width: auto;
 }
 
 .male-hero, .blue-hero{
