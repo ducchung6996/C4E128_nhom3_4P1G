@@ -543,7 +543,7 @@ header {
     -webkit-backdrop-filter: blur(3.5px);
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 20px 0 rgba(229, 229, 239, 0.37);
+    box-shadow: 0 8px 12px 0 rgba(229, 229, 239, 0.37);
     transition: 0.4s;
     padding: 0px 20px;
     color: #fff;
@@ -624,11 +624,12 @@ header {
 }
 
 .commic-type {
+    width: fit-content;
     background: rgba(255, 255, 255, 0.25);
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 20px 10px 10px 10px;
 }
 
@@ -690,17 +691,19 @@ div h3 {
 
 .container {
     width: 100%;
-    padding: 0 10%;
+    padding: 0 12%;
     display: flex;
     gap: 32px;
 }
 
 .main-content {
+    position: relative;
     width: 70%;
     height: fit-content;
-    position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-comic-type {
@@ -1073,10 +1076,10 @@ h2 {
     width: 100vw;
     height: 440px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
     align-items: flex-end;
     position: relative;
-    padding: 0 25vw;
     background-color: #91242d;
 }
 
@@ -1099,11 +1102,15 @@ h2 {
     width: 470px;
 }
 
+.male-hero, .blue-hero{
+  height: 600px; 
+  width: auto; 
+}
+
 .get-to-know {
     font-size: 20px;
     font-weight: 600;
     color: #80776e;
-
 }
 
 .character-name {
@@ -1118,7 +1125,6 @@ h2 {
 
 }
 
-/* #84253c */
 .slide-footer>button {
     cursor: pointer;
     background-color: #5a544e;
@@ -1197,6 +1203,6 @@ h2 {
 
 .copyright {
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 20px;
     color: #91242d;
 }
