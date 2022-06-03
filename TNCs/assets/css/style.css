@@ -1072,7 +1072,7 @@ h2 {
     height: 440px;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 10px;
     align-items: flex-end;
     position: relative;
     background-color: #91242d;
@@ -1101,8 +1101,6 @@ h2 {
   height: 600px; 
   width: auto; 
 }
-
-
 
 .get-to-know {
     font-size: 20px;
