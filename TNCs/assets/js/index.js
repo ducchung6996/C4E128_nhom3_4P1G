@@ -1,5 +1,4 @@
-var owl = $('.owl-carousel');
-owl.owlCarousel({
+$('.owl-one').owlCarousel({
     loop: true,
     nav: false,
     dots: false,
@@ -18,6 +17,26 @@ owl.owlCarousel({
         },
         1800: {
             items: 3
+        }
+    }
+});
+
+$('.owl-two').owlCarousel({
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:1,
+    margin:30,
+    stagePadding:30,
+    smartSpeed:450,
+    responsive: {
+        0: {
+            items: 1
+        },
+        1200: {
+            items: 1
+        },
+        1800: {
+            items: 1
         }
     }
 });
@@ -90,7 +109,7 @@ function hidePage() {
         item.style.opacity = "0";
     }
     for (let item of btn) {
-        item.style.backgroundColor = "#d42f2a";
+        item.style.backgroundColor = "#91242d";
     }
 }
 
