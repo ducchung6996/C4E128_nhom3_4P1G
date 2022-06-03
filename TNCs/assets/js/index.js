@@ -94,6 +94,9 @@ function closeLoginForm() {
     document.getElementById("loginform").reset();
     document.getElementById("register").reset();
     document.getElementById("new-pw").reset();
+    for (let item of inputBox) {
+        item.style.background = "none";
+    }
 }
 
 window.onclick = function (event) {
