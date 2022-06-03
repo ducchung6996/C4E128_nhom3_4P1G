@@ -237,7 +237,7 @@ header {
     justify-content: center;
     align-items: center;
     visibility: hidden;
-    background-color: rgba(202, 199, 199, 0.4);
+    background-color: rgba(102, 102, 102, 0.4);
 }
 
 #new-pw {
@@ -279,7 +279,7 @@ header {
     justify-content: center;
     align-items: center;
     visibility: hidden;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(102, 102, 102, 0.4);
 }
 
 
