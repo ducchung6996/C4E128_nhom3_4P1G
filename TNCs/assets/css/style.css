@@ -1071,10 +1071,10 @@ h2 {
     width: 100vw;
     height: 440px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
     align-items: flex-end;
     position: relative;
-    padding: 0 25vw;
     background-color: #91242d;
 }
 
