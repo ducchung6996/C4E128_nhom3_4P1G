@@ -129,12 +129,13 @@ const loginBtns = document.getElementById("login-singup");
 const userBtns = document.getElementById("user-menu");
 const userName = document.getElementById("welcome");
 
-if (localStorage.getItem("rememberUser")){
+if (localStorage.getItem("rememberUser")) {
     const rememberedUser = localStorage.getItem("rememberUser");
     userName.innerText = rememberedUser;
     successLogin();
 } else {
-    logout()
+    loginBtns.style.display = "block";
+    userBtns.style.display = "none";
 }
 
 function successLogin() {
@@ -143,9 +144,21 @@ function successLogin() {
 }
 
 function logout() {
-    loginBtns.style.display = "block";
-    userBtns.style.display = "none";
-    localStorage.removeItem("rememberUser");
+    Swal.fire({
+        title: 'Bạn có muốn đăng xuất ?',
+        showDenyButton: true,
+        confirmButtonText: 'Yep',
+        confirmButtonColor: '#3085d6',
+        denyButtonText: `Nah`,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            loginBtns.style.display = "block";
+            userBtns.style.display = "none";
+            localStorage.removeItem("rememberUser");
+        } else if (result.isDenied) {
+           return;
+        }
+    })
 }
 
 for (let item of inputBox) {
@@ -154,42 +167,46 @@ for (let item of inputBox) {
 
 function login(event) {
     event.preventDefault()
-    const {user, pw, remember} = event.target.elements;
+    const { user, pw, remember } = event.target.elements;
     const userProfile = JSON.parse(localStorage.getItem(user.value));
 
     if (localStorage.getItem(user.value) == undefined) {
-        swal({
-            title: "Ops",
-            text: "Tài khoản này không tồn tại",
-            icon: "error",
-            button: "Damn son",
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Tài khoản này không tồn tại',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Damn son'
         });
         user.style.background = "#ec6051";
         return;
     }
 
     if (userProfile.user != undefined) {
-        swal({
-            title: "Welcome",
+        Swal.fire({
+            icon: 'success',
+            title: 'Welcome',
             text: `Chào mừng ${userProfile.user}`,
-            icon: "success",
-            button: "Yesssss",
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Yesssss'
         });
         userName.innerText = userProfile.user;
     } else if (userProfile.pw === pw.value) {
-        swal({
-            title: "Welcome",
+        Swal.fire({
+            icon: 'success',
+            title: 'Welcome',
             text: `Chào mừng ${user.value}`,
-            icon: "success",
-            button: "Yesssss",
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Yesssss'
         });
         userName.innerText = user.value;
     } else {
-        swal({
-            title: "Nope",
-            text: "Bạn đã nhập sai mật khẩu",
-            icon: "error",
-            button: "Nani ?",
+        Swal.fire({
+            icon: 'error',
+            title: 'Nope',
+            text: 'Bạn đã nhập sai mật khẩu',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Nani ?'
         });
         pw.style.background = "#ec6051";
         return;
@@ -219,57 +236,62 @@ function checkIfStringHasSpecialChar(string) {
 function signup(event) {
     event.preventDefault()
     const { user, email, pw, rpw } = event.target.elements;
-    
+
     if (pw.value.includes(" ")) {
-        swal({
-            title: "Nah",
-            text: "Mật khẩu không được có dấu cách",
-            icon: "error",
-            button: "Lmao",
+        Swal.fire({
+            icon: 'error',
+            title: 'Nah',
+            text: 'Mật khẩu không được có dấu cách',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Lmao'
         });
         pw.style.background = "#ec6051";
         return;
     }
 
     if (pw.value !== rpw.value) {
-        swal({
-            title: "Nah",
-            text: "Mật khẩu xác nhận chưa đúng",
-            icon: "error",
-            button: "Lmao",
+        Swal.fire({
+            icon: 'error',
+            title: 'Nah',
+            text: 'Mật khẩu xác nhận chưa đúng',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Lmao'
         });
         rpw.style.background = "#ec6051";
         return;
     }
 
     if (localStorage.getItem(user.value)) {
-        swal({
-            title: "Nah",
-            text: "Tài khoản này đã tồn tại",
-            icon: "error",
-            button: "Lmao",
+        Swal.fire({
+            icon: 'error',
+            title: 'Nah',
+            text: 'Tài khoản này đã tồn tại',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Lmao'
         });
         user.style.background = "#ec6051";
         return;
     }
 
     if (checkIfStringHasSpecialChar(user.value) == true) {
-        swal({
-            title: "Nah",
-            text: "Tên người dùng không được chứa ký tự đặc biệt",
-            icon: "error",
-            button: "Lmao",
+        Swal.fire({
+            icon: 'error',
+            title: 'Nah',
+            text: 'Tên người dùng không được chứa ký tự đặc biệt',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Lmao'
         });
         user.style.background = "#ec6051";
         return;
     }
 
     if (localStorage.getItem(email.value)) {
-        swal({
-            title: "Bủh",
-            text: "Email này đã được sử dụng",
-            icon: "error",
-            button: "Shettttt",
+        Swal.fire({
+            icon: 'error',
+            title: 'Bủh',
+            text: 'Email này đã được sử dụng',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Shettttt'
         });
         email.style.background = "#ec6051";
         return;
@@ -287,11 +309,12 @@ function signup(event) {
 
     localStorage.setItem(user.value, JSON.stringify(userProfile));
     localStorage.setItem(email.value, JSON.stringify(userEmailProfile));
-    swal({
-        title: "Well done",
-        text: "Đăng ký thành công",
-        icon: "success",
-        button: "Yeah boizzz",
+    Swal.fire({
+        icon: 'success',
+        title: 'Well done',
+        text: 'Đăng ký thành công',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Yeah boizzz'
     });
     closeLoginForm();
 }
@@ -302,11 +325,12 @@ function changePassword(event) {
     event.preventDefault()
     const { user, email, pw, rpw } = event.target.elements;
     if (localStorage.getItem(user.value) == undefined) {
-        swal({
-            title: "Ops",
-            text: "Tài khoản này không tồn tại",
-            icon: "error",
-            button: "Damn son",
+        Swal.fire({
+            icon: 'error',
+            title: 'Ops',
+            text: 'Tài khoản này không tồn tại',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Damn son'
         });
         user.style.background = "#ec6051";
         return;
@@ -315,35 +339,49 @@ function changePassword(event) {
     const userProfile = JSON.parse(localStorage.getItem(user.value))
 
     if (email.value !== userProfile.email) {
-        swal({
-            title: "Nah",
-            text: "Bạn đã nhập sai email",
-            icon: "error",
-            button: "Nani ?",
+        Swal.fire({
+            title: 'Nah',
+            text: 'Bạn đã nhập sai email',
+            icon: 'error',
+            confirmButtonText: 'Nani ?'
         });
         email.style.background = "#ec6051";
         return;
     }
-    
+
     if (pw.value.includes(" ")) {
-        swal({
-            title: "Nah",
-            text: "Mật khẩu không được có dấu cách",
-            icon: "error",
-            button: "Lmao",
+        Swal.fire({
+            title: 'Nah',
+            text: 'Mật khẩu không được có dấu cách',
+            icon: 'error',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Lmao'
         });
         pw.style.background = "#ec6051";
         return;
     }
 
     if (pw.value !== rpw.value) {
-        swal({
-            title: "Nah",
-            text: "Mật khẩu xác nhận chưa đúng",
-            icon: "error",
-            button: "Lmao",
+        Swal.fire({
+            title: 'Nah',
+            text: 'Mật khẩu xác nhận chưa đúng',
+            icon: 'error',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Lmao'
         });
         rpw.style.background = "#ec6051";
+        return;
+    }
+
+    if (pw.value === userProfile.pw) {
+        Swal.fire({
+            title: 'Nah',
+            text: 'Mật khẩu không được trùng với mật khẩu cũ',
+            icon: 'error',
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Lmao'
+        });
+        pw.style.background = "#ec6051";
         return;
     }
 
@@ -359,11 +397,12 @@ function changePassword(event) {
 
     localStorage.setItem(user.value, JSON.stringify(userChangeProfile));
     localStorage.setItem(email.value, JSON.stringify(userEmailProfile));
-    swal({
-        title: "Done",
-        text: "Thay đổi mật khẩu thành công",
-        icon: "success",
-        button: "Oke la",
+    Swal.fire({
+        title: 'Done',
+        text: 'Thay đổi mật khẩu thành công',
+        icon: 'success',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Oke la'
     });
     closeLoginForm();
 
