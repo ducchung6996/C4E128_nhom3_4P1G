@@ -1106,9 +1106,53 @@ input:not(:checked)~label:hover~label {
     width: auto;
 }
 
-.male-hero, .blue-hero{
-  height: 600px; 
-  width: auto; 
+.yor{
+    background-color:#91242d;
+}
+
+.yor-gtk{
+    color:#e5b0b4;
+}
+
+.yor-name{
+    color:#db2d2d;
+}
+
+.yor-btn{
+    background-color:#e5b0b4; 
+    color: #000;
+}
+
+.anya{
+    background-color:#e2918a;
+}
+
+.anya-gtk{
+    color:#de655a;
+}
+
+.anya-name{
+    color:#c6372a; 
+}
+
+.anya-btn{
+    background-color:#de655a;
+}
+
+.loid{
+    background-color: #5f7762;
+}
+
+.loid-gtk{
+    color:#394d41;
+}
+
+.loid-name{
+    color:#8aae8f
+}
+
+.loid-btn{
+    background-color:#475f50;
 }
 
 .get-to-know {
