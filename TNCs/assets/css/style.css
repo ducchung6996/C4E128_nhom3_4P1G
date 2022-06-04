@@ -1161,6 +1161,10 @@ input:not(:checked)~label:hover~label {
     color: #80776e;
 }
 
+.slide-footer>button:hover {
+    transform: scale(1.1);
+}
+
 .character-name {
     font-size: 42px;
     font-weight: bolder;
@@ -1205,8 +1209,6 @@ input:not(:checked)~label:hover~label {
 .title-container {
     position: absolute;
 }
-
-
 
 .social-media {
     width: 100%;
