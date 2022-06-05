@@ -1,10 +1,26 @@
+window.addEventListener('scroll', reveal);
+function reveal() {
+    let revealItems = document.getElementsByClassName("reveal");
+    for (let item of revealItems) {
+        let windowHeight = window.innerHeight;
+        let revealTop = item.getBoundingClientRect().top;
+        let revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+            item.classList.add("displayed");
+        } else {
+            item.classList.remove("displayed");
+        }
+    }
+}
+
 $('.owl-one').owlCarousel({
     loop: true,
     nav: false,
     dots: false,
     autoplay: true,
     center: true,
-    margin: 30,
+    margin: 60,
     autoWidth: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
@@ -159,7 +175,7 @@ function logout() {
             userBtns.style.display = "none";
             localStorage.removeItem("rememberUser");
         } else if (result.isDenied) {
-           return;
+            return;
         }
     })
 }

@@ -450,12 +450,16 @@ header {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10vw;
 }
 
 #intro>img {
     cursor: pointer;
     transition: 0.3s;
+    width: 20%;
+    border-radius: 20px;
+    box-shadow: 12px -14px 18px 0px rgb(203, 195, 195);
 }
 
 #intro>img:hover {
@@ -470,13 +474,6 @@ header {
     font-size: 20px;
     color: grey;
     margin-bottom: 10px;
-}
-
-#intro>img {
-    width: 20%;
-    border-radius: 20px;
-    box-shadow: 12px -14px 18px 0px rgb(203, 195, 195);
-
 }
 
 .intro-about {
@@ -498,6 +495,14 @@ header {
 
 .slider-content {
     margin-bottom: 150px;
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: all 2s ease;
+}
+
+.slider-content.displayed {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .owl-item {
@@ -689,6 +694,11 @@ header {
 }
 
 /* main content start */
+
+.main-contents {
+    overflow: hidden;
+}
+
 div h3 {
     text-transform: uppercase;
 }
@@ -709,6 +719,14 @@ div h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateX(300px);
+    transition: all ease 1.5s;
+}
+
+.main-content.displayed {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .nav-comic-type {
@@ -943,9 +961,18 @@ input:not(:checked)~label:hover~label {
 }
 
 /* side-bar start */
-.slide_bar {
+
+.side-bar {
     width: 30%;
     height: fit-content;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all ease 1.5s;
+}
+
+.side-bar.displayed {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .famous-authors {
@@ -1075,6 +1102,18 @@ input:not(:checked)~label:hover~label {
 
 .owl-two {
     margin-bottom: 50px;
+}
+
+#footer {
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: all ease 1.5s;
+}
+
+#footer.displayed {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .slider-footer-container {
