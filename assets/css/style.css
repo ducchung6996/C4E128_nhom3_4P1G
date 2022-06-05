@@ -738,10 +738,6 @@ header {
 
 /* main content start */
 
-.main-contents {
-    overflow: hidden;
-}
-
 div h3 {
     text-transform: uppercase;
 }
@@ -1182,7 +1178,6 @@ input:not(:checked)~label:hover~label {
 }
 
 #footer {
-    overflow: hidden;
     opacity: 0;
     transform: translateX(500px);
     transition: all ease 1.5s;
