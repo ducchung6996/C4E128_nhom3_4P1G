@@ -171,6 +171,11 @@ function logout() {
         denyButtonText: `Nah`,
     }).then((result) => {
         if (result.isConfirmed) {
+            Swal.fire({
+                title: 'Gud byeeeeeeeeeee',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Oke'
+            });
             loginBtns.style.display = "block";
             userBtns.style.display = "none";
             localStorage.removeItem("rememberUser");
