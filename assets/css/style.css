@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-  }
+}
 
 * {
     margin: 0;
@@ -37,6 +37,30 @@ a {
 }
 
 #back-to-top:hover {
+    transform: scale(1.1);
+}
+
+/* Custom scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    transition: 0.4s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #bdc3c7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #34495e;
+    transition: 0.4s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #51708f;
     transform: scale(1.1);
 }
 
@@ -1206,53 +1230,53 @@ input:not(:checked)~label:hover~label {
     width: auto;
 }
 
-.yor{
-    background-color:#91242d;
+.yor {
+    background-color: #91242d;
 }
 
-.yor-gtk{
-    color:#e5b0b4;
+.yor-gtk {
+    color: #e5b0b4;
 }
 
-.yor-name{
-    color:#db2d2d;
+.yor-name {
+    color: #db2d2d;
 }
 
-.yor-btn{
-    background-color:#e5b0b4; 
+.yor-btn {
+    background-color: #e5b0b4;
     color: #000;
 }
 
-.anya{
-    background-color:#e2918a;
+.anya {
+    background-color: #e2918a;
 }
 
-.anya-gtk{
-    color:#de655a;
+.anya-gtk {
+    color: #de655a;
 }
 
-.anya-name{
-    color:#c6372a; 
+.anya-name {
+    color: #c6372a;
 }
 
-.anya-btn{
-    background-color:#de655a;
+.anya-btn {
+    background-color: #de655a;
 }
 
-.loid{
+.loid {
     background-color: #5f7762;
 }
 
-.loid-gtk{
-    color:#394d41;
+.loid-gtk {
+    color: #394d41;
 }
 
-.loid-name{
-    color:#8aae8f
+.loid-name {
+    color: #8aae8f
 }
 
-.loid-btn{
-    background-color:#475f50;
+.loid-btn {
+    background-color: #475f50;
 }
 
 .get-to-know {
