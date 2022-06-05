@@ -1,5 +1,14 @@
 window.addEventListener('scroll', reveal);
 function reveal() {
+    let toTopBtn = document.getElementById("back-to-top")
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        toTopBtn.style.visibility = "visible";
+        toTopBtn.style.opacity = "1";
+    } else {
+        toTopBtn.style.visibility = "hidden";
+        toTopBtn.style.opacity = "0";
+    }
+
     let revealItems = document.getElementsByClassName("reveal");
     for (let item of revealItems) {
         let windowHeight = window.innerHeight;
