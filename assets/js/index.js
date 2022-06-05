@@ -13,7 +13,7 @@ function reveal() {
     for (let item of revealItems) {
         let windowHeight = window.innerHeight;
         let revealTop = item.getBoundingClientRect().top;
-        let revealPoint = 150;
+        let revealPoint = 120;
 
         if (revealTop < windowHeight - revealPoint) {
             item.classList.add("displayed");
