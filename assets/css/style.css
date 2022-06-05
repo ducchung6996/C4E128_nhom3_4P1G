@@ -960,6 +960,40 @@ input:not(:checked)~label:hover~label {
     opacity: 1;
 }
 
+.page-numb {
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0;
+    background-color: #404040;
+    border-top: solid 2px #1d1d1d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.page-numb>button {
+    padding: 10px 0;
+    width: 40px;
+    border: 0;
+    background: 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: #34495e;
+    border: 1px solid #182838;
+    transition: 0.4s;
+}
+
+.page-numb>button:hover {
+    background-color: #475d72;
+
+}
+
+.page-numb>button:active {
+    background-color: #87a0b8;
+
+}
+
 /* side-bar start */
 
 .side-bar {
