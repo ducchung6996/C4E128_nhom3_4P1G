@@ -29,12 +29,13 @@ a {
     z-index: 2;
     bottom: 30px;
     right: 20px;
-    background-color: #2980b9;
+    background-color: #784a70;
     color: #fff;
     transition: 0.4s;
     border-radius: 10px;
     visibility: hidden;
     opacity: 0;
+    box-shadow: 2px 6px 84px -7px rgba(255,249,249,0.75);
 }
 
 #back-to-top:hover {
@@ -504,7 +505,7 @@ header {
 #intro>img {
     cursor: pointer;
     transition: 0.3s;
-    width: 20%;
+    width: 18%;
     border-radius: 20px;
     box-shadow: 12px -14px 18px 0px rgb(203, 195, 195);
 }
@@ -524,11 +525,10 @@ header {
 }
 
 .intro-about {
-    text-transform: uppercase;
     font-size: 28px;
     text-align: justify;
     color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Greta Sans Condensed Bold", "Greta Sans Bold", Arial, sans-serif;
 }
 
 /* slider content */
@@ -1018,14 +1018,13 @@ input:not(:checked)~label:hover~label {
     background: 0;
     color: #fff;
     cursor: pointer;
-    background-color: #34495e;
+    background-color: #91242d;
     border: 1px solid #182838;
     transition: 0.4s;
 }
 
 .page-numb>button:hover {
-    background-color: #475d72;
-
+    background-color: #784a70;
 }
 
 .page-numb>button:active {
@@ -1315,7 +1314,8 @@ input:not(:checked)~label:hover~label {
     text-align: center;
     font-size: 36px;
     gap: 20px;
-    color: #fff;
+    color: #91242d;
+    font-weight: 800;
 }
 
 .title-container {
