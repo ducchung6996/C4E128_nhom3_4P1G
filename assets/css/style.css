@@ -543,7 +543,7 @@ header {
 .slider-content {
     margin-bottom: 150px;
     opacity: 0;
-    transform: translateX(500px);
+    transform: translateX(600px);
     transition: all 2s ease;
 }
 
@@ -1179,8 +1179,8 @@ input:not(:checked)~label:hover~label {
 
 #footer {
     opacity: 0;
-    transform: translateX(500px);
-    transition: all ease 1.5s;
+    transform: translateX(600px);
+    transition: all ease 2s;
 }
 
 #footer.displayed {
