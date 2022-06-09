@@ -1365,6 +1365,6 @@ input:not(:checked)~label:hover~label {
 
 .copyright {
     font-size: 16px;
-    margin-top: 20px;
+    padding: 20px 0;
     color: #91242d;
 }
