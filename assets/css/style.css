@@ -1024,7 +1024,7 @@ input:not(:checked)~label:hover~label {
 }
 
 .page-numb>button:hover {
-    background-color: #784a70;
+    background-color: #d4434f;
 }
 
 .page-numb>button:active {
