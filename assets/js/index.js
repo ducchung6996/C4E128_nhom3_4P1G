@@ -1,6 +1,6 @@
 window.addEventListener('scroll', reveal);
 function reveal() {
-    let toTopBtn = document.getElementById("back-to-top")
+    let toTopBtn = document.getElementById("back-to-top");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         toTopBtn.style.visibility = "visible";
         toTopBtn.style.opacity = "1";
