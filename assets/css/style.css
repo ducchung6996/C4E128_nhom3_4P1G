@@ -35,7 +35,7 @@ a {
     border-radius: 10px;
     visibility: hidden;
     opacity: 0;
-    box-shadow: 2px 6px 84px -7px rgba(255,249,249,0.75);
+    box-shadow: 2px 6px 84px -7px rgba(255, 249, 249, 0.75);
 }
 
 #back-to-top:hover {
